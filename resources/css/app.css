@@ -1,0 +1,20 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+.background-image
+{
+    background-image: url('https://c1.wallpaperflare.com/preview/306/717/306/editing-macbook-night-photo.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 600px;
+}
+
+p.content {
+    width: 1230px;
+    margin: auto;
+  }

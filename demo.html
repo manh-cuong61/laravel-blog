@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./demo.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="menu-bar">
+            <a href="">Dashboard</a>
+        </div>
+        <div class="content">    
+            <div class="overview">
+                <div class="total-users">
+                   <div class="detail-total-users">
+                        Total users:
+                        <span>50</span>
+                   </div>
+                </div>
+                <div class="total-posts">
+                    <div class="detail-total-posts">
+                        Total Posts:
+                        <span>50</span>
+                   </div>
+                   
+                </div>
+                <div class="total-views">
+                    <div class="detail-total-views">
+                        Total views:
+                        <span>50</span>
+                   </div>
+                    
+                </div>
+            </div>
+            <div class="min-max-viewed">
+                <p class="most-viewed">Most viewed post: <span>Post 1</span> </p>
+                <p class="least-viewed">Least viewed post: <span>Post 2</span> </p>
+            </div>
+            <div class="detail">
+                <div class="title-detail">
+                    <div class="title">
+                        Detail
+                    </div>
+                    <div class="search">
+                        <form action="">
+                            Name: <input class="text" type="text" placeholder="search here...">
+                            <input  class="button-search" type="submit" value="search">
+                        </form>
+                        
+                        
+                    </div>
+                </div>
+                
+                <div class="detail-content">
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <form action="/admin/blog" method="post">
+                                @csrf
+                                <th>Author
+                                <select name="author" id="">
+                                    <option value=""></option>
+                                @foreach ($authors as $author )
+                                    <option value="{{$author}}">{{$author}}</option>
+                                @endforeach
+                                </select>
+                                </th>
+                                
+                                <th>Date posted 
+                                    <input type="date" id="date" name="date">  
+                                </th>
+                                <input class="submit-form" type="submit" > 
+            
+                                 <th>Total views</th>
+                                <th>Total comments</th>
+                                <th>Delete</th>
+                            </form>
+                        </tr>
+                        <tr>
+                            <td>post1</td>
+                            <td>manhcuong</td>
+                            <td>12/1/2021</td>
+                            <td>12</td>
+                            <td>15</td>
+                            <td>Delete</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
